@@ -131,3 +131,60 @@ while (true) {
 }
 ```
 
+
+
+_____
+
+# Day04
+
+1. 方法重载
+
+> 只和方法名称和参数列表有关系.
+
+- 参数个数
+- 参数类型
+- 多类型位置
+
+2. 多种方式比较大小
+
+- ```java
+  public static boolean isSame(int o, int j) {
+          System.out.println("int");
+          return o == j;
+      }
+  ```
+
+- ```java
+  public static boolean isSame(byte o, byte j) {
+          boolean comp = (o == j ? true : false);
+          System.out.println("byte");
+          return comp;
+      }
+  ```
+
+- ```java
+  public static boolean isSame(short o, short j) {
+          System.out.println("short");
+          if (o == j) {
+              return true;
+          } else {
+              return false;
+          }
+  ```
+
+- ```java
+          boolean same;
+          if (c == g) {
+              same = true;
+          } else {
+              same = false;
+          }
+          return same;
+  ```
+
+3. 
+
+
+
+____
+
