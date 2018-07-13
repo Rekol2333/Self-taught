@@ -173,14 +173,13 @@ _____
   ```
 
 - ```java
-         boolean same;
-         if (c == g) {
-             same = true;
-         } else {
-             same = false;
-         }
-         return same;
-     ```
+          boolean same;
+          if (c == g) {
+              same = true;
+          } else {
+              same = false;
+          }
+          return same;
   ```
 
 3. 
@@ -188,24 +187,4 @@ _____
 
 
 ____
-
-
-  ```
-
-
-
-_____
-
-
-
-
-
-
-
-# Day05
-
-1. 当调用方法的时候，向方法的小括号进行传参，传递进去的其实是数组的地址值。
-2. 返回值数量可以为 0 个或 1 个;
-
-> 返回值类型为数组时, 也是返回一个值, 一个地址值. 同`1.`
 
