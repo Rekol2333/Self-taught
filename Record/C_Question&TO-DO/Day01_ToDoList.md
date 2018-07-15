@@ -47,5 +47,14 @@ ____
          
    System.out.println("str02 == str02? : " + (str02 == str03));
    ```
+   
 
-3. - [ ] 
+3. - [ ] 验证?
+
+     ```java
+     String str1 = hello;
+     String str2 = hello;
+     String str3 = hello;//str1 将地址值赋给了 str2, str3.????
+     ```
+
+4. - [ ] 
