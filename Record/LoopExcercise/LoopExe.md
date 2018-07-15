@@ -1,10 +1,16 @@
+# Loop_Exercise
+
+
+
 1. 解方程组：x+y+z=10, 2x+y+3z=20, 3x-y-z=-2.
 
 
 
 2. ![img](file:///C:\Users\Rekol\AppData\Roaming\feiq\RichOle\3568823959.bmp) 
 
+思路:
 
+- 理解条件: 三种鸡的数目和三类钱都得是100;
 
 ```java 
 
@@ -40,4 +46,10 @@ public static void getNum() {
 ```
 
 
+
+3. 编写一个java程序,求:13 - 23 + 33 - 43 +...+ 973 - 983 + 993 -1003的值.
+
+   1. [LoopExeDemo01](G:\AllTheExercise\Magic\basic-code\day04-code\src\cn\itcast\day04\LoopExercise)
+
+   多种写法.但核心都是计数器.不同条件.
 

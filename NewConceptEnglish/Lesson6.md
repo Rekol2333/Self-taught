@@ -60,3 +60,47 @@ stunt 绝活
 > spare some changes   给些零钱吧
 
 two bags of flour.		两袋面粉
+
+____
+
+
+
+# Lesson 7
+
+## language points
+
+1. while:
+
+- -at the same time
+
+My father is reading newspaper while my mother is cooking()
+
+- whereas 表转折.
+
+lazy & hardworking.
+
+2. off
+
+- 离开
+
+She took the painting off the wall.
+
+3. the Custom<u>s</u> House 	海关
+4. a grain of     `一粒沙子`
+
+a pile of sand    `一堆沙子`
+
+5. be full of ==be filled with
+
+## Key structures and usage
+
+1. 
+
+- waiting <u>on</u> the airfield
+- keeping guard <u>at</u> the door.
+- carry it <u>into</u> the 
+- took the parcel <u>off</u> the plane
+- waiting <u>inside</u> the main building
+- 
+
+ 

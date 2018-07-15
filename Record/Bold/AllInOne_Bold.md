@@ -173,13 +173,14 @@ _____
   ```
 
 - ```java
-          boolean same;
-          if (c == g) {
-              same = true;
-          } else {
-              same = false;
-          }
-          return same;
+         boolean same;
+         if (c == g) {
+             same = true;
+         } else {
+             same = false;
+         }
+         return same;
+     ```
   ```
 
 3. 
@@ -187,4 +188,78 @@ _____
 
 
 ____
+
+
+  ```
+
+
+
+# Day06_Bold
+
+**1. class 参数列表, 地址值传递.**
+
+1. - [ ] `class` 作为参数地址值的传递.
+
+   ```java
+   	public static void main(String[] args) {
+           Phone theOne = new Phone();
+           theOne.color = "RED";
+           theOne.price = 2345;
+           asParam(theOne);
+       }
+   
+       public static void asParam(Phone oneClass) {
+           System.out.println(oneClass.color);
+       }
+   ```
+
+   `Phone.class` :  
+
+   ```java
+   public class Phone {
+       String name = "Apple";
+       double price = 8888.0;
+       String color = "blue";
+   
+       public void call(String who) {
+           System.out.println("call sb.: " + who);
+       }
+       public void sendMassage() {
+           System.out.println("SEND MASSAGE");
+       }
+   }
+   
+   ```
+
+   2. - [ ] 返回值类型是 `class` 类型, 将一个方法内的变量进行处理后,返回该方法, 并用新的方法实列存储.
+
+      ```java
+      Phone storage = getReturnClass();
+      
+      public static Phone getReturnClass() {
+                  Phone clret = new Phone();
+                  return clret;
+      
+      ```
+
+
+**2. ** `Stack` `heap ` `method area`
+
+```java
+Phone one = new Phone();
+```
+
+**栈内存: **程序运行
+
+- 调用方法传参时, 也是在栈内存确定运行.
+
+**堆内存: **`new` 出来的
+
+- 保存`成员变量`
+
+- 保存`方法区保存的成员方法`的地址值
+
+**方法区: **class 和 main 方法.
+
+
 
