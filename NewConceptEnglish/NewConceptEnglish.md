@@ -110,7 +110,7 @@ ____
 
 # Lesson 7
 
-## language points
+## Language points
 
 1. while:
 
@@ -190,3 +190,33 @@ ____
 
 ____
 
+# Lesson 9  A cold welcome
+
+## 1. Language points
+
+1. gather
+
+- gather round `围拢`
+- gather the audience
+
+2. in a moment  表将来,"过一会"
+3. the face of clock"面盘"
+
+- the minute hand"分针"
+
+4. refuse request
+
+- refuse to do
+
+## 2. Key structures and usage
+
+1. 描述时间.
+
+- ten to three"两点五十"
+- a quarter to nine"八点四十五"
+- half pass ten
+- a quarter past eleven
+
+2. He didn't say anything ====> He said nothing.
+
+- There is something I wanna tell you.

@@ -1,6 +1,6 @@
 # Daily_Thinking_05
 
-## 1.[补] 计数器
+## 1. [补] 计数器
 
 
 
@@ -65,4 +65,17 @@ int[] array = {11, 123, 323, 333, 22, 4232};
 ```java
 
 ```
+
+### 2.5 String 作为容器
+
+```java
+String storeRandomNum = "";
+for (int i = 0; i < 5; i++) {//控制输出多少个字母.
+    int randomNum = r.nextInt(26) + 65;
+    char characters = (char) randomNum;
+    storeRandomNum += characters;
+}
+```
+
+> 同`Bold`文件
 
