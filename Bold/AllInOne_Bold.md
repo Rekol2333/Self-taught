@@ -694,3 +694,214 @@ Random().nextInt(26) + 65;
 2. ```
    对象添加到集合
    ```
+
+
+
+____
+
+# Day08_String类-static-Arrays类-Math类
+
+## 1.String类
+
+### 1. String 类型是常量, 长度不变;
+
+1. String 类的底层是通过字节数组`byte[]`实现的.
+
+   打印字符数组时 ,直接打印出来. 
+
+```java
+int[] num = {12,232,43};
+sout(num);//打印地址值;
+char[] chars = {'a','s','d'};
+sout(chars);//asd 	直接打印出来.
+
+
+//通过字符数组构造
+        char[] chars = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'};
+        String str2 = new String(chars);
+//通过字节数组构造
+        byte[] bytes = {97, 98, 99};
+        String str3 = new String(bytes);
+
+```
+
+
+
+2. 引用类型中`==` 比较的是地址值;
+   - 直接赋值的字符串指向常量池中的字符串对象地址值
+   - `new` 的是新创建的.
+
+
+
+
+
+### 2. `String`类中方法
+
+#### 2.1 比较方法: 
+
+- `public boolean equals(Object obj)`
+  - 对称性
+  - `object`参数是一个字符串且**内容** 一致,才会return true.
+  - 推荐写法: `"abc".equals(str);`
+  - 字符串数组也能用该方法.OBJ
+
+
+
+- `boolean equalsInorCase(String anotherString) ` 
+  - 规定了参数类型, 不能是` String[]`.
+
+#### 2.2 获取方法
+
+1. `int length()`
+
+2. `String concat(String str)`
+
+   ```java
+   String str = "Hello, "
+   str += "java";//"Hello. java"
+   ```
+
+3. `char chartAt(int index)`
+
+   - "返回指定索引处的 char 值"
+
+   - 常与遍历
+
+4. `int indexOf(Stirng str)`
+
+   - **第一次出现的位置**
+
+#### 2.3 截取方法
+
+1. `String substring (int index)`
+
+2. `String substring(int beginIndex, int endIndex)`
+
+   - `[begin, end)`左闭右开
+
+   - 光标数位数法.底层原理就是因为`左闭右开`所以末位数得＋1
+
+     ```java
+     String str = "HelloWorld";
+     String str1 = str.substring(4,7);//oWo
+     
+     ```
+
+   - 
+
+#### 2.4 转换方法
+
+1. `char[] toCharArray ()`
+   - 字符串转换成 char 型数组
+   - 利用`char.fori快捷键`对字符串内每个字符进行处理
+
+2. `byte[] getBytes ()`----> 
+
+   - "A" ----> 65, "Z" ----> 90, "a" ----> 97
+
+   -  I / O 流常用
+
+3. `String replace (CharSequence target, CharSequence replacement)`
+   - 生成新的字符串存储,//可能需要新的 variable 存储
+
+#### 2.5 分割方法
+
+`public String[] split(String regex)`
+
+- 按照字符串内容进行分割.
+
+```java
+String email = "Rekol2333@163.com";
+String[] split = email.split("@");
+
+```
+
+- 参数是一个正则表达式, 若是以` .`为分割点, 则应:
+
+```java
+String[] point = email.split("\\.");
+```
+
+- 得到字符串数组存储分割的元素.最终得到的数组为: 
+
+```java
+split[] = {"Rekol2333", "163.com"}
+```
+
+
+
+### 3. 练习题
+
+#### 1. 数组拼接字符串
+
+#### 2. [统计字符个数]丶重点练习.
+
+
+
+____
+
+## 2. static
+
+### 2.1 静态变量和静态方法
+
+- `static` 被修饰的成员变量方法属于类
+- 静态方法**通过类名称调用**.
+  - 本类当中的可以省略`类名称.`
+- **静态方法不能访问非静态**
+
+> 内存中先加载类和静态内容, 然后才加载非静态.
+
+> 先人不知后人.
+
+- **静态方法中不能用this**
+  - this 表示当前对象.
+  - static 是通过类名称调用, 不用对象名称调用.
+  - 调用方式不同, 否则矛盾.
+
+### 2.2 静态代码块
+
+- 位置: 类中方法外
+- 随着类加载,  只执行一次
+- 因为静态内容总是优先于非静态执行
+- 优先于`main方法` 和`构造方法`执行
+- 学JDBC处常用
+- 一次性对静态成员变量赋值.
+
+
+
+## 3. Arrays 工具类
+
+导包.
+
+### 1. 喜闻乐见的静态方法
+
+1. `static String toString (int[ ] a)`
+
+- `[a, b, c, d, d]` 的形式
+
+2. `static void sort (int[] a)`
+
+- 升序排列, 
+  - 字符的先后顺序
+  - 自定义排序.
+
+
+
+### 2. 练习题: 数组 ----> String 的倒序遍历
+
+1. String 类中的`toCharArray()`
+   - 字符串 转成 字符数组, 再倒序打印.
+
+
+
+
+
+## 4. Math 类
+
+1.  `static double abs(double a) `绝对值
+2. `static double ceil(double a)`
+   - 向上取整.
+3. `static double floor(double a)`
+   - 向下取整
+4. `static long round(double a)`
+   - 四舍五入

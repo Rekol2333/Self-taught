@@ -207,3 +207,37 @@ array022[4] = 0.332;
 System.out.println(array022[4]);
 ```
 
+
+
+# Day08 String类
+
+1. 判断忽略大小写时: `cannon resolve method "equalsInorCase"`
+   - `public boolean equalsIgnoreCase (String anotherString)`
+
+```java
+		String[] str1 = {"Hello"};
+        String[] str2 = {"hello"};
+
+        boolean tOrF = str1.equals(str2);
+        System.out.println("tOrF = " + tOrF);
+        boolean tORF = str2.equalsInorCase(str1);//
+```
+
+- `Error:(14, 9) java: 无法从静态上下文中引用非静态 方法 sleep()`
+
+```java
+public class Person {
+  String name;
+  int age;
+  public static void study() {
+    sleep();    
+  }
+  public void sleep() {
+    System.out.println("sleep");
+  }
+  public static void main(String[] args){
+    Person.study();
+  }
+}
+```
+

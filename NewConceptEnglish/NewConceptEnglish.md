@@ -220,3 +220,41 @@ ____
 2. He didn't say anything ====> He said nothing.
 
 - There is something I wanna tell you.
+
+
+
+____
+
+
+
+# Lesson 10 	Not for jazz
+
+## 1. Language points
+
+1. **keep**
+
+- keep your cards carefully      'store'
+- keep guard
+- keep the secret
+- keep his job
+- keep a diary   '记笔记'
+- What keep you? 
+
+2. belong to 
+
+- They belong to a younger generation.
+- The chair belongs in the other room.
+  - Where do these things belong? '这些东西该放在哪? '
+
+3. 现在进行时的被动语态: (多用于科技文章)
+   1. The river course is being cleaned.
+4. 双重所有格: 
+   1.  a student <u>of</u> mine
+   2. a friend of my <u>father's</u> 
+   3. a property of my <u>father's</u>  "父亲的财产"
+
+## 2. Key structures and usage
+
+1. 被动语态
+   1. Two of the strings were broken.
+   2. Now we are not allowed to touch it."省略了by my father."

@@ -220,3 +220,99 @@ D.	[b]
 2. `sout(al)`
 
 > [a, b]
+
+
+
+____
+
+
+
+# Day08
+
+1.  观察下列代码，选出正确答案：（ ） 
+
+   ```java
+   int a = 5959;
+   String str = "9527";
+   if(str.equals("9527")){
+     str = a + "";
+   }
+   System.out.println(str);
+   ```
+
+2. 观察
+
+   ```java
+   String str = "wo ai java,ni ai ma?";
+   char[] ch = str.toCharArray();
+   for (int i = 0; i < ch.length; i++) {
+     if((ch[i]+"").equals("java")){
+       System.out.println(ch[i]);
+     }
+   }
+   ```
+
+3. 观察
+
+   ```java
+   String str = "wo ai java,ni ai ma?";
+   if(str.contains("java")){
+     str.replace("java", "php");
+   }
+   System.out.println(str);
+   ```
+
+4. 观察
+
+   ```java
+   public class Person {
+     String name;
+     int age;
+     public static void study() {
+       sleep();    
+     }
+     public void sleep() {
+       System.out.println("sleep");
+     }
+     public static void main(String[] args){
+       Person.study();
+     }
+   }
+   ```
+
+   A. 编译报错		B. sleep		C. 运行报错		D. 什么也没输出.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Answer
+
+1. `str` 指向了新的数组`a + " "`的内存地址.
+2. `(ch[i]+"").equals("java")` 值为false,且没有其他运行程序, 所以结果为"没有正确答案"
+3. 并没有对`if`语句内的替换后的String 进行赋值, 声明新的变量进行存储.
+
+所以`str`还是指向了原本的字符串地址值.
+
+4. 编译报错 `Error:(14, 9) java: 无法从静态上下文中引用非静态 方法 sleep()`
+
+_____
+
