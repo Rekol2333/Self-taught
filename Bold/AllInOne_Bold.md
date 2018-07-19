@@ -905,3 +905,64 @@ ____
    - 向下取整
 4. `static long round(double a)`
    - 四舍五入
+
+
+
+____
+
+
+
+# Day09 继承_抽象类
+
+## 1.继承
+
+### 1.1 三个特点
+
+- 单继承
+- 多级继承
+- 父类可以有多个子类
+
+### 1.2 继承中构造方法的访问特点.
+
+1. 子类必须调用父类构造方法.----> 父类构造方法先执行
+
+2. 通过`super()` 调用, 重载父类构造方法.
+
+   ```java
+   class Fu {
+       public Fu(){}
+       public Fu(String name, int age){
+           set();
+           set();
+       }
+   }
+   
+   public class Zi extends Fu{
+       public Zi(){
+           super("Rekol", 23);
+       }
+   }
+   ```
+
+3. `super() `必须是子类constructor 的第一个 statement, And only once.
+
+   ```java
+   public class Zi extends Fu{
+       public Zi(){
+           super();
+       }
+       public Zi(String name, int age){
+           super();//Wrong!!
+          
+       }
+   }
+   ```
+
+4. `super()` 和`this()`都必须在 constructor 的第一句, 故水火不容.
+
+
+
+
+
+## 2. 抽象类
+

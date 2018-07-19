@@ -258,3 +258,28 @@ ____
 1. 被动语态
    1. Two of the strings were broken.
    2. Now we are not allowed to touch it."省略了by my father."
+
+
+
+
+
+____
+
+# Lesson  11 One good turn deserves another
+
+## 1. Language points
+
+1. deserve: to be worthy of 
+
+- His suggestions deserve our attention.
+
+2. salary"技能知识型" 	wages"(体力劳动)薪水"
+3. pay it back 
+   - pay for my dinner
+   - pay taxes \ bills
+   - pay <u>by</u> cheque  "支票付款"
+   - pay <u>off</u> debts "偿还账务"
+   - Is there a pay phone around ? "付费的电话"
+   - overtime pay "加班费"
+4. Tony worked <u>**in**</u> a lawyer's office years ago, but he  now is working <u>**at**</u> a bank.
+
