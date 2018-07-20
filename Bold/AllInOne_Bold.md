@@ -1,3 +1,7 @@
+---
+typora-copy-images-to: ./
+---
+
 # 【课上摘要】今日重点; 易错点；易混淆点
 
 [TOC]
@@ -645,13 +649,13 @@ Random().nextInt(26) + 65;
    for (int i = 0; i < 5; i++) {//控制输出多少个字母.
        int randomNum = r.nextInt(26) + 65;
        char characters = (char) randomNum;
-       storeRandomNum += characters;
+       storeRandomNum += characters;//拼接起来
    }
    ```
 
    
 
-4. > 往随机字符串中随机插入随机一个范围内的随机数字.
+4. > 往随机字符串中随机插入随机一个范围[0,9]内的随机数字.
 
    ```JAVA
    Random r = new Random();
@@ -691,17 +695,35 @@ Random().nextInt(26) + 65;
 
 1. 实例与基本操作: 
 
-2. ```
-   对象添加到集合
+2. 对象添加到集合
+
+   ```
+   
+   lll
    ```
 
+3. 
 
+4. `ArrayList` 中`倒着删除`的方法
+
+   - 假定`ArraList<String> list` 中元素是: ["def", "def", "def", "hij", "jkol"]
+   - 集合本身是活动的, 在`for的i++`循环中会出现少删除的现象
+
+   ```java
+   for (int i = list. size() - 1; i >= 0; i--) {
+       if("def".equals(list.get(i))){
+            list.remove(i);
+       }
+   }
+   ```
+
+   
 
 ____
 
 # Day08_String类-static-Arrays类-Math类
 
-## 1.String类
+## 1. String类
 
 ### 1. String 类型是常量, 长度不变;
 
@@ -792,8 +814,8 @@ sout(chars);//asd 	直接打印出来.
 #### 2.4 转换方法
 
 1. `char[] toCharArray ()`
-   - 字符串转换成 char 型数组
-   - 利用`char.fori快捷键`对字符串内每个字符进行处理
+   - **字符串转换成 char 型数组**
+   - **利用`char.fori快捷键`对字符串内每个字符进行处理**
 
 2. `byte[] getBytes ()`----> 
 
@@ -802,7 +824,8 @@ sout(chars);//asd 	直接打印出来.
    -  I / O 流常用
 
 3. `String replace (CharSequence target, CharSequence replacement)`
-   - 生成新的字符串存储,//可能需要新的 variable 存储
+   - 生成新的字符串存储,
+   - 可能需要新的 variable 存储
 
 #### 2.5 分割方法
 
@@ -828,7 +851,7 @@ String[] point = email.split("\\.");
 split[] = {"Rekol2333", "163.com"}
 ```
 
-
+- 将字符串转换成字符串数组的方式.
 
 ### 3. 练习题
 
@@ -953,16 +976,38 @@ ____
        }
        public Zi(String name, int age){
            super();//Wrong!!
-          
-       }
+              }
    }
    ```
 
 4. `super()` 和`this()`都必须在 constructor 的第一句, 故水火不容.
 
+### 1.3 继承中使用成员变量的原则, 特点:
 
+> 调用时: 子类有成员变量就使用子类的, 没有, 就使用父类非私有的. 
 
+```
+谁调用, 就是谁的变量
+```
 
+### 1.4 继承中使用成员方法的原则: 
+
+> 其中和父类同名的方法(方法的覆盖重写) 使用子类自己的.
+
+### 1.5 方法的覆盖重写
+
+修饰符: 子类必须比父类更广博.
+
+返回值类型: 子类比父类要求更严格.更细
+
+方法名, 参数列表一致.
 
 ## 2. 抽象类
 
+抽象类中的构造方法
+
+![1532097969320](D:\MarkAndMemory\Bold\Attachment\1532097969320.png)
+
+> Abstract methods cannot have a body.
+
+必须对抽象父类的方法进行覆写, 被称为**实现方法**

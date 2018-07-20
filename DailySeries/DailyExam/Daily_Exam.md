@@ -316,3 +316,64 @@ ____
 
 _____
 
+
+
+# Day09 extends
+
+1. observe:
+
+   ```java
+   class Animal {
+     String name="animal";
+     public void print(Animal a){
+       System.out.println("动物:"+a.name);
+     }
+   }
+   class Dog extends Animal {
+     String name="dog";
+     public void print(Animal a ){
+       System.out.println("狗:"+a.name);
+     }
+   }
+   public static void main(String[] args){
+     Dog d = new Dog();
+     d.print(new Animal());
+   }
+   ```
+
+   A: 动物:animal	B:动物:dog 	c:狗: animal 		D: 狗:dog
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Answer
+
+1.C
+
+
+
+
+
+____
+

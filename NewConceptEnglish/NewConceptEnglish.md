@@ -273,7 +273,7 @@ ____
 
 - His suggestions deserve our attention.
 
-2. salary"技能知识型" 	wages"(体力劳动)薪水"
+	. salary"技能知识型" 	wages"(体力劳动)薪水"
 3. pay it back 
    - pay for my dinner
    - pay taxes \ bills
@@ -283,3 +283,31 @@ ____
    - overtime pay "加班费"
 4. Tony worked <u>**in**</u> a lawyer's office years ago, but he  now is working <u>**at**</u> a bank.
 
+
+
+____
+
+# Lesson 12  
+
+## Language points
+
+1. Captain Rekol  	"Rekol船长"
+2. We'll <u>meet</u> him at the harbour early in the morning.
+3. set out  (for + somewhere) = set off , start out.   "出发"
+4. plenty of food (+ Uncountable noun.)
+5. say hello to your family for me.
+   - say sorry to sb.
+6. be away = absent
+   - Will you take care of my plants while I'm away?
+   - I thought you were not <u>in</u>.
+   - I think I'll be <u>round</u> for a while.
+   - When will you be back?
+7. sail across the Atlantic.
+
+
+
+## 2. Key structures and usage
+
+1. 一般将来时
+   - I <u>shall</u> visit <u>**him**</u> tomorrow.
+2. Happy journey!
