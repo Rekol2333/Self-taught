@@ -331,7 +331,7 @@ _____
    }
    class Dog extends Animal {
      String name="dog";
-     public void print(Animal a ){
+     public void print(Animal a){
        System.out.println("狗:"+a.name);
      }
    }
@@ -371,7 +371,7 @@ _____
 
 1.C
 
-
+参数类型: `Animal a`
 
 
 

@@ -1011,3 +1011,49 @@ ____
 > Abstract methods cannot have a body.
 
 必须对抽象父类的方法进行覆写, 被称为**实现方法**
+
+
+
+_____
+
+# Day09 接口-多态-引用类型
+
+## 1. 接口
+
+### 1. `abstract`, `static`,关键字的类似效果.
+
+### 2.方法覆盖重写的广泛运用.
+
+实现类对冲突的覆盖重写.的几种情况.
+
+1. 实现多个接口下: 存在重复的抽象方法, 实现类中要进行override.
+1. 多个接口下: 存在重复的默认方法, 实现类中也要进行override.
+
+### 3.实战细节.
+
+1. static method in `Interface` : `InterfaceName.staticMethod()`
+   None of `ImplementClass{}` business
+1. Can't **OVERRIDE ** the static method in`Interface`,  only generate  a new static method.
+   
+
+## 2. 多态
+
+1. 指的是`继承`或`实现`关系中对象的具有多种形态: 我自己和我的父类
+
+1. 父类引用指向了右侧子类的对象.
+
+1. 注意点: 
+
+   > 多态中的成员方法: 编译看左边,  运行看右边.向上查找.---->父类是否有该方法, 否则报错.
+   >
+   > 多态中成员变量: 都看左边. 看的还是父类的成员变量.
+
+1. 向上转型与向下转型
+
+   1. 向上转型: 父类调用父子**共有的方法**, 并运行子类的方法.
+   1. 向下转型: 将向上转型后的子类重新变为本类, 从而**调用本类特有方法.**
+      - 使用`instanceof` 关键字进行判断,返回`Boolean`值. 从而向下转型.
+
+1. **Usage**
+   ![1532178834034](D:\MarkAndMemory\Bold\Attachment\1532178834034.png)
+
