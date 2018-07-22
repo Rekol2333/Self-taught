@@ -1,10 +1,15 @@
+---
+typora-root-url: ./
+typora-copy-images-to: ./
+---
+
 # DailyFlow
 
 ## 1. Day09-基于继承的发红包案例
 
 ### 1. 思路
 
-![1532097064408](C:\Users\Rekol\AppData\Local\Temp\1532097064408.png)
+![1532097064408](D:\MarkAndMemory\DailySeries\DailyFeedback\PicturesStorage\1532097064408.png)
 
 ### 父类: 
 
@@ -152,3 +157,6 @@ public class RandTest {
 
 ____
 
+
+
+## 2.

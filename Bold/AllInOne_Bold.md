@@ -1,5 +1,6 @@
 ---
 typora-copy-images-to: ./
+typora-root-url: ..\Pictures
 ---
 
 # 【课上摘要】今日重点; 易错点；易混淆点
@@ -1057,3 +1058,38 @@ _____
 1. **Usage**
    ![1532178834034](D:\MarkAndMemory\Bold\Attachment\1532178834034.png)
 
+
+
+
+
+____
+
+# Day11 final_Inner class
+
+## 1. `final` 关键字
+
+修饰变量: 
+
+- 局部变量
+  - 基本类型: ![1532255339162](D:\MarkAndMemory\Bold\Attachment\1532255339162.png)
+
+    特殊情况:
+
+   ![1532255382550](D:\MarkAndMemory\Bold\Attachment\1532255382550.png)
+
+  
+
+  - 引用类型: ![1532255443637](D:\MarkAndMemory\Bold\Attachment\1532255443637.png)
+
+
+
+## 2. Inner Class
+
+1. 局部内部类: 
+
+![1532259068640](/../Bold/1532259068640.png)
+
+- 只有当前所属的方法才能使用它,  出了方法就不行了. 
+
+2. 局部内部类的final问题
+   - 从 java8+ 开始,  局部内部类如果希望访问所在方法的局部变量, 那么这个局部变量必须是**有效`final`的** .
