@@ -1,14 +1,10 @@
 # Daily_Thinking_05
 
-## 
-
-
-
 ## 1. ''容器''
 
-### 1. 计数器
+### 1.1 计数器
 
-### 2. 借助第三方, 存储一方变量,
+### 1.2 借助第三方, 存储一方变量,
 
 > 用第三个变量倒手.
 
@@ -17,9 +13,9 @@
 
 ```
 
-### 3. String 作为容器
+### 1.3 String 作为容器
 
-#### 3.1
+#### 1.3.1
 
 ```java
 String storeRandomNum = "";
@@ -32,7 +28,7 @@ for (int i = 0; i < 5; i++) {//控制输出多少个字母.
 
 > 同`Bold`文件
 
-#### 3.2 
+#### 1.3.2 
 
 > 往随机字符串中随机插入随机一个范围[0,9]内的随机数字.
 
@@ -63,7 +59,7 @@ int[] array = {11, 123, 323, 333, 22, 4232};
 
 ```
 
-## 3. 关注数组索引, 而不是数组内元素.
+## 3. 数值反转, 关注数组索引, 而不是数组内元素.
 
 - **min <  max **
 - **min++, max--**
@@ -90,21 +86,11 @@ int[] array = {11, 123, 323, 333, 22, 4232};
 - `新的数组元素` 与 ` 返回的数组元素`元素无关系.
 - 应用场景: 方法内要多个返回值, 用数组来存储不同的返回值; 调用处用数组盛装和获取不同返回值.
 
-```java
 
-```
-
-> 
 
 ## 5.对象作为方法参数或者返回值, 存储的都是地址值.
 
-
-
-
-
-
-
-## 6. String ----> 数组 & 数组 ---->String.
+## 6. String ----> 数组 & 数组 ---->String & ArrayList --> String
 
 ### 6.1 String ----> ''字符''数组
 
@@ -124,6 +110,29 @@ String 处理 单个字符时 `.toCharArray()`方法,转换成字符数组, 再�
 可以调用`Arrays.toString(int[] a)`
 
 - `[a, b, c, d, d]` 的形式, 拼接成String
+
+
+
+### 6.3 ArrayList ----> String
+
+1. 实现效果:
+
+   > ```
+   > {element@element@element}
+   > ```
+
+```java
+	   System.out.print("{");
+        for (int i = 0; i < a.size(); i++) {
+            String s = a.get(i);
+            if (i != a.size() - 1) {
+                System.out.print(s + "@");
+            } else {
+                System.out.print(s + "}");
+            }
+        }
+        System.out.println();
+```
 
 
 
@@ -148,6 +157,36 @@ while (num<=500) {
     }
     num++;
 }
+```
+
+# 8.{element@element@element} 与发红包最后一个的相同思路.
+
+代码同`6.3`
+
+发红包: 
+
+```java
+ public ArrayList<Integer> divide(int totalMoney, int count) {
+        // 创建保存各个红包金额的集合
+        ArrayList<Integer> list = new ArrayList<>();
+        // 定义循环次数,总个数‐1次
+        int time = count ‐ 1;
+        // 一次计算,生成平均金额
+        int money = totalMoney / count;
+        // 循环分配
+        for (int i = 0; i < time; i++) {
+            // 添加到集合中
+            list.add(money);
+            // 总金额扣除已分配金额
+			totalMoney ‐= money;
+        }
+        // 剩余的金额,为最后一个红包
+        list.add(totalMoney);
+        System.out.println("普通红包金额:" + list);
+        // 返回集合
+        return list;
+    }
+
 ```
 
 

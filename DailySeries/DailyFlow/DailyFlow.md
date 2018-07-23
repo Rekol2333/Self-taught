@@ -159,4 +159,33 @@ ____
 
 
 
-## 2.
+## 2.将数组中包含参数str的元素存入另一个String 数组中并返回
+
+- 核心: `String` 类中的 `boolean contains(sequence s) `的方法作为判断依据, 再用另一个数组进行存储, 作为返回值.
+
+  > 当且仅当此字符串包含指定的 char 值序列时，返回 true
+
+  ```java
+  public static String[] filter(String[] arr, String str) {	
+  		int count = 0;
+          for (int i = 0; i < arr.length; i++) {
+  
+              if (arr[i].contains(str)) {
+                  count++;
+              }
+          }
+//并不知道新存储的数组长度是多少.  
+          String[] str2 = new String[count];
+  
+          for (int i = 0; i < arr.length; i++) {
+  
+              if (arr[i].contains(str)) {
+                  str2[i] = arr[i];
+              }
+          }
+          return str2;
+      
+  }
+  ```
+
+  

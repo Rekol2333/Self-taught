@@ -700,7 +700,6 @@ Random().nextInt(26) + 65;
 
    ```
    
-   lll
    ```
 
 3. 
@@ -1007,7 +1006,7 @@ ____
 
 抽象类中的构造方法
 
-![1532097969320](D:\MarkAndMemory\Bold\Attachment\1532097969320.png)
+![1532097969320](D:\MarkAndMemory\Pictures\1532097969320.png)
 
 > Abstract methods cannot have a body.
 
@@ -1056,7 +1055,7 @@ _____
       - 使用`instanceof` 关键字进行判断,返回`Boolean`值. 从而向下转型.
 
 1. **Usage**
-   ![1532178834034](D:\MarkAndMemory\Bold\Attachment\1532178834034.png)
+   ![1532178834034](D:\MarkAndMemory\Pictures\1532178834034.png)
 
 
 
@@ -1071,15 +1070,15 @@ ____
 修饰变量: 
 
 - 局部变量
-  - 基本类型: ![1532255339162](D:\MarkAndMemory\Bold\Attachment\1532255339162.png)
+  - 基本类型: ![1532255339162](D:\MarkAndMemory\Pictures\1532255339162.png)
 
     特殊情况:
 
-   ![1532255382550](D:\MarkAndMemory\Bold\Attachment\1532255382550.png)
+   ![1532255382550](D:\MarkAndMemory\Pictures\1532255382550.png)
 
   
 
-  - 引用类型: ![1532255443637](D:\MarkAndMemory\Bold\Attachment\1532255443637.png)
+  - 引用类型: ![1532255443637](D:\MarkAndMemory\Pictures\1532255443637.png)
 
 
 
@@ -1087,7 +1086,7 @@ ____
 
 1. 局部内部类: 
 
-![1532259068640](/../Bold/1532259068640.png)
+![1532259068640](D:\MarkAndMemory\Pictures/1532259068640.png)
 
 - 只有当前所属的方法才能使用它,  出了方法就不行了. 
 
