@@ -337,7 +337,7 @@ st=>start:FirstFlow
 
 1. > // 0 -100 之内的偶数和.---->引入累加思想.
    > // 找到所有的偶数,并记录下下来
-   > //偶数相加.
+   > // 偶数相加.
 
 ```java
 public class EvenNumberInLoop {
@@ -501,16 +501,10 @@ _____
          }
          return same;
      ```
-  ```
-
-3. 
-
-
 
 ____
 
 
-  ```
 
 # Day05
 
@@ -787,11 +781,15 @@ sout(chars);//asd 	直接打印出来.
 
    - "返回指定索引处的 char 值"
 
-   - 常与遍历
+   - 常与遍历赋值给一个数组或者集合存储.
 
 4. `int indexOf(Stirng str)`
 
    - **第一次出现的位置**
+
+5. `boolean contains(sequence s) `
+
+   - 检查字符串中是否包含某几个字符, 可作为筛选条件.
 
 #### 2.3 截取方法
 
@@ -1022,14 +1020,14 @@ _____
 
 ### 1. `abstract`, `static`,关键字的类似效果.
 
-### 2.方法覆盖重写的广泛运用.
+### 2. 方法覆盖重写的广泛运用.
 
 实现类对冲突的覆盖重写.的几种情况.
 
 1. 实现多个接口下: 存在重复的抽象方法, 实现类中要进行override.
 1. 多个接口下: 存在重复的默认方法, 实现类中也要进行override.
 
-### 3.实战细节.
+### 3. 实战细节.
 
 1. static method in `Interface` : `InterfaceName.staticMethod()`
    None of `ImplementClass{}` business
@@ -1092,3 +1090,128 @@ ____
 
 2. 局部内部类的final问题
    - 从 java8+ 开始,  局部内部类如果希望访问所在方法的局部变量, 那么这个局部变量必须是**有效`final`的** .
+
+
+
+_____
+
+# Day12 常用API
+
+## 1. Object 类 & Objects 类
+
+1. `java.lang.object`
+
+判断是否重写了`toString()`方法,  直接打印对象即可.
+
+````java
+Random r = new Random();
+sout(r);//地址值
+````
+
+>  只要打印出来不是地址值, 说明重写了 `toString()` 方法.
+
+2. `public static boolean equals()`的`Objects.equals` 
+
+   如果确定一方为`null`, 可以防止报空指针异常错误.
+
+   ```JAVA
+   public static boolean equals(Object a,Object b){
+       return (a == b) || (a != null) && a.equals(b);
+   }
+   ```
+
+
+
+## 2. Date 类 & DateFormat 类
+
+### 1. Date
+
+1. 表示特定的瞬间: 
+
+   - 1h = 1 * 60(minute) * 60 (second) * 1000
+
+   - 1000毫秒 = 1 秒;
+
+2. 作用: 对日期进行计算
+
+   1. 日期---> 毫秒 ---> 日期
+
+   2. 时间原点 : 
+
+      ```java
+      Date d = new Date(0);
+      ```
+
+3. 构造方法 `public Date()`: 表示自从标准基准时间（称为“历元（epoch）”，即1970年1月1日00:00:00 GMT）以来的指定毫秒数。
+
+4. `long getTime()`返回对应的时间毫秒值.
+
+### 2. DateFormat 类 & simpleDateFormate 类
+
+1. DateFormat 抽象类, 利用子类`simpleDateFormate `调用`DateForma`t 方法
+2. 在Date对象与String对象之间进行来回转换
+3. `String format(String pattern)`   
+   - 将Date 对象转换成字符串时间
+4. `Date parse(String str)`
+   - 将获得的字符串时间转换成Date 对象.
+
+
+
+## 3.Calendar 类
+
+1. `Calendar.getTime()`成为`Calendar` 类和`Date`类的桥梁.
+
+## 4. System 类
+
+1. ` currentTimeMillis()` 效果同`new Date().getTime()`, 但后者不推荐. 
+
+2. - [ ] `public static void arraycopy(Object src, int srcPos, Object dest, int destPos, int length)` 指定数组copy
+
+   ```java
+   int[] src = {1,2,3,4,5};
+   int[] dest = {6,7,8,9,10};
+   System.arraycopy(src, 1, dest, 0, 3);//{2,3,4,9,10}
+   ```
+
+   
+
+## 5. StringBuilder 类[重要]
+
+1. 又叫可变字符序列. 初始容量为16个.
+
+2.  `StringBuilder` ----> `String ` 
+
+   `toStirng()`
+
+3. `String ` ----> `StringBuilder`
+
+   利用构造方法
+
+   
+
+
+
+## 6. 包装类
+
+### 1. 基本类型和包装类型的转换.
+
+1. 基本类型----> String
+
+```java
+int s = 100;
+String s1 = s + "";
+//String s2 = new String(100); Wrong!
+String s2 = Integer.toString(100);
+String s3 = String.valueOf(100);
+
+```
+
+2. String ---> 基本类型( '=' 运算顺序从右至左)
+
+- 使用包装类的静态方法`static parseXXX(String str)`
+
+```java
+int i = Integer.parseInt(s1);
+double d = Double.parseDouble("23.0");
+```
+

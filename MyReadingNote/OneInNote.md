@@ -2,11 +2,7 @@
 
 [TOC]
 
-## 2. simple Java program
-
-
-
-## 3. Java基础程序设计
+## Java基础程序设计
 
 ### 3.2.2	数据类型的溢出
 
@@ -20,9 +16,9 @@
 
 
 
-## 5.7 String
+## String
 
-1. 两种声明方式: `new`开辟新的堆内存空间: 		   ![1531623888016](C:\Users\Rekol\AppData\Local\Temp\1531623888016.png)
+1. 两种声明方式: `new`开辟新的堆内存空间: 		   ![1531623888016](D:\MarkAndMemory\MyReadingNote\assets/1531623888016.png)
 
 
 
@@ -33,7 +29,7 @@ String str1 = hello;
 String str2 = hello;
 String str3 = hello;//str1 将地址值赋给了 str2, str3.????
 ```
-![1531623826092](C:\Users\Rekol\AppData\Local\Temp\1531623826092.png)
+![1531623826092](D:\MarkAndMemory\MyReadingNote\assets/1531623826092.png)
 
 **说明:**
 
@@ -55,7 +51,7 @@ String str6 = str3 + str4;
 System.out.println(str5 == str6);//false;
 ```
 
-![1531624369484](C:\Users\Rekol\AppData\Local\Temp\1531624369484.png)
+![1531624369484](D:\MarkAndMemory\MyReadingNote\assets/1531624369484.png)
 
 ​    **4. `String`与引用传递.**
 
@@ -77,7 +73,7 @@ System.out.println(str5 == str6);//false;
 
 图解:
 
-![1531641977910](C:\Users\Rekol\AppData\Local\Temp\1531641977910.png)
+![1531641977910](D:\MarkAndMemory\MyReadingNote\assets/1531641977910.png)
 
 > 每一个字符串对象都表示一个匿名对象(参考匿名对象的规则)
 >
@@ -89,11 +85,11 @@ System.out.println(str5 == str6);//false;
 
 内存图: 
 
-![1531643681550](C:\Users\Rekol\AppData\Local\Temp\1531643681550.png)
+![1531643681550](D:\MarkAndMemory\MyReadingNote\assets/1531643681550.png)
 
 > ![1531643700300](C:\Users\Rekol\AppData\Local\Temp\1531643700300.png)
 
-![String与引用调用内存图](D:\MarkAndMemory\Record\Piece\String 与引用调用内存图.png)
+![String与引用调用内存图](D:\MarkAndMemory\MyReadingNote\assets/String 与引用调用内存图.png)
 
 
 
@@ -101,3 +97,6 @@ _____
 
 
 
+## 方法参数及其传递问题.
+
+![1532571900919](D:\MarkAndMemory\MyReadingNote\assets\1532571900919.png)
