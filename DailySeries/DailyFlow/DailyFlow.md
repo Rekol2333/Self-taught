@@ -5,7 +5,7 @@ typora-copy-images-to: ./
 
 # DailyFlow
 
-## 1. Day09-基于继承的发红包案例
+# 1. Day09-基于继承的发红包案例
 
 ### 1. 思路
 
@@ -159,9 +159,11 @@ ____
 
 
 
-## 2.将数组中包含参数str的元素存入另一个String 数组中并返回
+# 2. ` contains()`方法, 
 
 - 核心: `String` 类中的 `boolean contains(sequence s) `的方法作为判断依据, 再用另一个数组进行存储, 作为返回值.
+
+- 将数组中包含参数str的元素存入另一个String 数组中并返回
 
   > 当且仅当此字符串包含指定的 char 值序列时，返回 true
 
@@ -174,7 +176,7 @@ ____
                   count++;
               }
           }
-//并不知道新存储的数组长度是多少.  
+  //并不知道新存储的数组长度是多少.  
           String[] str2 = new String[count];
   
           for (int i = 0; i < arr.length; i++) {
@@ -188,4 +190,53 @@ ____
   }
   ```
 
-  
+
+
+
+# 3. 类型转换汇总.
+
+## 3.1 基本数据类型 <====> String
+
+### 3.1.1 基本类型----> String
+
+```java
+int s = 100;
+String s1 = s + "";
+//String s2 = new String(100); Wrong!
+String s2 = Integer.toString(100);
+String s3 = String.valueOf(100);
+
+```
+
+
+
+### 3.1.2 String ---> 基本类型( '=' 运算顺序从右至左)
+
+- 使用包装类的静态方法`static parseXXX(String str)`
+
+```java
+int i = Integer.parseInt(s1);
+double d = Double.parseDouble("23.0");
+```
+
+
+
+
+
+## 3.2 String <====> StringBuilder
+
+### 3.2.1 StringBuilder ---->  String  
+
+   `toStirng()`
+
+
+
+### 3.2.2 String ----> StringBuilder
+
+利用构造方法
+
+
+
+# 4. 统计字符串字符个数
+
+1. HashMap 式

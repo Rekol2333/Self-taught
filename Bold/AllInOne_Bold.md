@@ -320,19 +320,8 @@ ____
 
 # Day03_Bold
 
-[TOC]
-
-____
-
 ```flow 
 st=>start: FirstFlow e => end op => operation : Faster? cond=>condition : Fast Or slow? st->op->cond cond(Fast)->e cond(slow)->op 
-```
-
-
-
-```flow
-st=>start:FirstFlow
-
 ```
 
 1. > // 0 -100 之内的偶数和.---->引入累加思想.
@@ -1163,7 +1152,7 @@ sout(r);//地址值
 
 ## 4. System 类
 
-1. ` currentTimeMillis()` 效果同`new Date().getTime()`, 但后者不推荐. 
+1. ` currentTimeMillis()` 效果同`new Date().getTime()`, 但后者不被推荐. 
 
 2. - [ ] `public static void arraycopy(Object src, int srcPos, Object dest, int destPos, int length)` 指定数组copy
 
@@ -1193,7 +1182,7 @@ sout(r);//地址值
 
 ## 6. 包装类
 
-### 1. 基本类型和包装类型的转换.
+### 1. 基本类型和String的转换.
 
 1. 基本类型----> String
 
@@ -1214,4 +1203,104 @@ String s3 = String.valueOf(100);
 int i = Integer.parseInt(s1);
 double d = Double.parseDouble("23.0");
 ```
+
+
+
+
+
+____
+
+# Day13 Collection 集合_迭代器
+
+
+
+- [ ] 集合中反向删除元素.
+
+## 1. Collection
+
+1. 集合只能存储 对象,(引用类型和包装类)
+2. 单列集合框架
+3. `public Object[] toArray()` 转换成一个object数组
+
+```java
+object[] objects = coll.toArray();
+for(int i = 0; i < objects.length; i++) {
+    sout(objects[i]);
+}
+```
+
+## 2. 迭代器
+
+### 2.1 增强for 循环
+
+
+
+## 3. 泛型
+
+1. E 
+
+# Day14 Collection体系
+
+## 1.LinkedList
+
+1. 模拟栈结构: 头尾操作较多.
+
+
+
+## 3. Vector
+
+1. 单线程.
+
+# Day15 Map体系
+
+## 1. Map 内常用方法.
+
+1. `public V put(K key, V value)`
+
+2. 返回值:
+
+   - 初始key 值不存在,  返回null
+
+   - key 值存在, 返回替换的value值
+
+     
+
+   ```java
+   Map<String, Double> map = new HashMap<>();
+           map.put("黑猫", 1.0);
+           map.put("白猫", 2.0);
+           System.out.println("map = " + map);
+   //        1.0:
+           System.out.println("map.put(\"黑猫\", 1.0) = " + map.put("黑猫", 1.0));
+   //        1.0
+           System.out.println("map.put(\"黑猫\", 1.0) = " + map.put("黑猫", 3.0));
+   //        3.0黑猫已经存在, 返回被替代的值.
+           System.out.println("map.put(\"黑猫\", 1.0) = " + map.put("黑猫", 2.0));
+   //          map.put("花猫", 1.0) = null
+           System.out.println("map.put(\"花猫\", 1.0) = " + map.put("花猫", 1.0));
+   ```
+
+   
+
+3. `public v remove(Object key)`:
+
+   - 返回值:
+     - key 存在, V 返回被删除的值
+     - 所要删除的key 不存在, v 返回null.
+
+4. `public V get (Object Key) `
+
+   - 同上,有对应的Key, 返回对应的值,没有则返回null
+
+5. `boolean containsKey(Object key) `
+
+遍历: 
+
+1. 通过键找值的方式: `set<K> keySet()`
+
+   ```java
+   
+   ```
+
+   
 
