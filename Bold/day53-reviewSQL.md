@@ -84,7 +84,7 @@
 `order by avg(mathscore) limit(offset: 起始行数, 每页个数);`
 
  	1. 条件: 
-```sql
+
  - 比较运算符: 
    - is null
    - between...and --> 区间
@@ -105,7 +105,6 @@
 	3. avg
 	4. max
 	5. min(score)
-```
 
 
 
@@ -119,11 +118,20 @@ _____
 alter table tablename auto_increment = 2;
 ```
 
+
 2. 修改唯一约束
 
 ```sql
 alter table tablename drop index columnname;
 ```
 
-- [ ] ###  多对多关系的建立.复合主键 以及联合主键的建立.
+
+- [ ] ##  多对多关系的建立.复合主键 以及联合主键的建立.
+
+```sql
+create table fktest(
+	id int primary key auto_increment,
+    primary key(deptno,job)
+);
+```
 
