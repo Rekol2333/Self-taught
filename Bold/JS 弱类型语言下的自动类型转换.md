@@ -61,7 +61,31 @@ Little case:
 
 
 
+正则对象: RegExp
+
+```js
+
+```
+
+
+
 ____
+
+# BOM&DOM
+
+```js
+document.getElementById("setA").onclick() = addAttribute();
+```
+
+
+
+
+
+
+
+
+
+
 
 
 
