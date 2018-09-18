@@ -54,7 +54,7 @@
 	var date = new Date().getTime();
 	应用: src = .... + date;
 ___
-ServletContext: 水	项目内资源: ![鱼](day66-tomcat-servlet_files/1.png)
+关系: ServletContext: 水	项目内资源: ![鱼](day66-tomcat-servlet_files/1.png)
 ___
 ##[归纳]文件下载的两种方式
 	1. 自动超链接方式
@@ -76,7 +76,7 @@ request.setCharacterEncoding("utf-8");
 response.getWriter().write("你好, servlet");
 ```
 	2. HttpServletResponse 对象的 setContentType()
-##[归纳] 请求数据格式和响应数据格式
+##[归纳] 请求数据格式和响应数据格式中重点name
 1. 请求数据格式
 2. 响应数据格式
 
