@@ -19,5 +19,7 @@
 软件: 
 	* Charles
 		* 抓包: 获取网上好看的验证码,获取源码.
-	* 插件:密码箱(chrome);key promote(idea)
-	* 
+	* 插件:(chrome);密码箱
+			(idea)key promote;FindBugs-IDEA
+	* cccleaner
+	* STS

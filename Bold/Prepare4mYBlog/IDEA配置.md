@@ -28,3 +28,21 @@
 ```
 - `Edit Variables`中编辑变量对应的方法:
 ![LiveTemplates](G:\AllTheExercise\Magic\MarkAndMemory\Pictures\Live Templates Snipaste_2018-09-15_19-58-15.png)
+
+# 3.Servlet 类模板
+```java
+#if (${PACKAGE_NAME} && ${PACKAGE_NAME} != "")package ${PACKAGE_NAME};#end
+#parse("File Header.java")
+@javax.servlet.annotation.WebServlet(name = "${Entity_Name}", value = "/${Entity_Name}")
+public class ${Class_Name} extends javax.servlet.http.HttpServlet {
+    @Overload
+    protected void doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, java.io.IOException {
+
+    }
+    
+    @Overload
+    protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, java.io.IOException {
+        doPost(request, response);
+    }
+}
+```
