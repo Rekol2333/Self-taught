@@ -19,6 +19,10 @@
 4. Cookie中不建议存中文, 也很少存中文
 	* 手动编解码.
 5. Cookie 存储中的 name 若是相同, 则对应的 value 会被后续存储的覆盖.
+
+6. 设置了cookie的访问路径之后，只能在设置的路径或者它的下一级路径下访问，
+例如同项目下，可以在请求路径为/demo2或者/demo2/test的servlet中获取到该cookie
+
 6. 遍历 Cookie 的工具类
 ```java
 public Cookie findCookie(Cookie[], cookieName){
@@ -38,6 +42,7 @@ if (cookie != null){
 		         c.setMaxAge(60*60);
 		         response.addCookie(c);
 	![详解...](Day74-Cookie-Session_files/1.png)			 
+
 8. [面试]3. session什么时候被销毁？
 			1. 服务器非正常关闭时
 				* 浏览器关闭时: 没有被销毁, 只是保存 sessionID 的cookie 被销毁, 
@@ -49,7 +54,8 @@ if (cookie != null){
 				<session-config>
 			        <session-timeout>30</session-timeout>
 			    </session-config>
-9. 
+9. Jsp只会在第一次访问的时候被web容器翻译成servlet 
+10. 
 ## [归纳] 常见编解码
 	1. URLEncoder <--> URLDecoder
 	2. Base64
@@ -68,3 +74,25 @@ if (cookie != null){
 												三种方式销毁
  
  Session 的保存依赖于 Cookie: cookie("set")
+
+## 删除持久性Cookie
+
+将原有的Cookie值覆盖。方式一：Cookie c = new Cookie("要删除的cookie名",""或null)，方式二：cookie.setValue("")
+
+设置path必须相同
+
+设置MaxAge的值为0 
+
+回写cookie
+
+
+
+## Cookies不能存中文问题
+
+cookie默认按照ASCII码表转码
+
+所以cookie默认不能存放中文和特殊符号
+
+可以将中文编码成不认识的编码存入 URLEncoder.encode("编码内容","字符集")
+
+取出时，再解码取出URLDecoder.decode("解码内容"，"字符集")

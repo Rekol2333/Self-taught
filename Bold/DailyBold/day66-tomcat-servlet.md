@@ -68,7 +68,11 @@ ___
 			- 输入流: 读取要下载的文件 --> servletContext.getRealPath("/Xxx"):获取到要下载的文件所在的路径
 			- 输出流: response.getOutputStream()
 ------
+文件下载
 
+通过超链接下载，即<a herf=”文件路径”> 。但是此方法只用于浏览器无法识别的文件类型
+
+通过代码下载。需要设置两个头和一个流，分别是Content-Type，Content-Disposition和文件的输入流 
 
 	 
 ## [归纳]需要设置处理中文乱码的地方.
